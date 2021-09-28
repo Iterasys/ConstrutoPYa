@@ -16,11 +16,27 @@ def subtrair(numero1, numero2):
 def multiplicar(numero1, numero2):
     return numero1 * numero2
 
+# esse é um exemplo de demonstração
 def dividir(numero1, numero2):
     if numero2 != 0:
         return numero1 / numero2
     else:
         return 'Não dividirás por zero'
+
+def dividir_try_except(numero1, numero2):
+    try:
+        return numero1 / numero2
+    except TypeError:
+        #return 'Não dividirás por zero'
+        if TypeError == ZeroDivisionError:
+            return 'Não dividirás por zero'
+        elif TypeError == ArithmeticError:
+            return 'Erro no cálculo'
+        elif TypeError == ValueError:
+            return 'Erro no valor'
+        else:
+            return 'Erro desconhecido'
+        pass
 
 # Testes Unitarios / Teste de Unidades
 
@@ -42,7 +58,11 @@ def test_somar_didatico():
     (10,6, 16), # teste 3
 ])
 def test_somar(numero1, numero2, resultado):
-    assert somar(numero1,numero2) == resultado
+    try:
+        assert somar(numero1,numero2) == resultado
+    except AssertionError:
+        print(f'Entrou no Except: {AssertionError}')
+        pass
 
 def test_somar_resultado_negativo():
     assert somar(-1000,-2000) == -3000
@@ -55,6 +75,29 @@ def test_multiplicar():
 
 def test_dividir():
     assert dividir(8,4) == 2
+
+def test_dividir_por_zero():
+    assert dividir(8,0) == 'Não dividirás por zero'
+
+
+
+@pytest.mark.parametrize('numero1, numero2, resultado',[
+    (8,2,4),
+    (20,4,5),
+    (10,0,'Não dividirás por zero')
+])
+def test_dividir_try_except(numero1,numero2,resultado):
+    assert dividir_try_except(numero1,numero2) == resultado
+
+
+
+
+
+
+    # teste positivo --> mostrar o resultado correto
+    #                --> avançar para a próxima etapa
+
+    # teste negativo --> mostrar a mensagem de erro
 
 # Dia 1 : 100 testes : 0 passaram
 # Dia 2 : 100 testes : 5 passaram
