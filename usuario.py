@@ -71,7 +71,7 @@ def ler_dados_do_csv():
         print(f'Falha imprevista: {fail}')
 
 @pytest.mark.parametrize('id,nome,sobrenome,email', ler_dados_do_csv() )
-def testar_dados_usuarios(id,nome,sobrenome,email): # função que testa o algo
+def testar_dados_usuarios_csv(id,nome,sobrenome,email): # função que testa o algo
     try:
         response = requests.get(f'https://reqres.in/api/users/{id}')
         jsonResponse = response.json()
@@ -85,7 +85,7 @@ def testar_dados_usuarios(id,nome,sobrenome,email): # função que testa o algo
         print('id:{} \n nome:{} \n sobrenome:{} \n email:{}'.format(id_obtido, nome_obtido, sobrenome_obtido, email_obtido))
         print(json.dumps(jsonResponse, indent=2, sort_keys=True))
 
-        assert id_obtido == id
+        assert id_obtido == int(id)
         assert nome_obtido == nome
         assert sobrenome_obtido == sobrenome
         assert email_obtido == email
@@ -94,4 +94,3 @@ def testar_dados_usuarios(id,nome,sobrenome,email): # função que testa o algo
         print(f'Um erro de HTTP aconteceu: {http_fail}')
     except Exception as fail:        # Qualquer exceção será tratada a seguir
         print(f'Falha inesperada: {fail}')
-
