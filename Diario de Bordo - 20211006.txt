@@ -1,0 +1,50 @@
+Aula 13 - 4 Operações Essenciais de uma Entidade
+
+       Para Entidades                   Para APIs / Web Services
++   C Create            I Incluir       Post
+-   R Reach / Research  C Consultar     Get
+*   U Update            A Atualizar     Put
+/   D Delete            E Excluir       Delete
+
+Ao invés da reqres.com vamos usar na aula de hoje o petstore.swagger
+
+Na Pet Store
+3 Entidades
+- User
+- Pet
+- Store
+
+API de treino mantida pela SmartBear, é de graça, mas tem seus momentos...
+
+Dúvida da aula passada: Sobre os undelines _
+- underline na frente de variáveis ou definições
+  É de uso local: _nome é uma váriavel interna
+- duas underline, na frente e no final
+  São funções mágicas / especiais: __init__ definir o método de inicialização
+
+Java:
+String nome = Nome
+
+Python:
+_nome = nome
+
+Hoje em dia, as empresas preferem sistemas assincronos ao invés de sincronos.
+Analogia entre a mensagem de WhatsApp e a ligação telefônica
+
+
+A v i s o s:
+- 7 e 8/out: Semana de Teste Mobile --> Assista ao vivo e/ou as gravações (Dezembro)
+- Não haverá aula em 11 e 12/out
+- 14/out começa a turma 132 (terças, quintas e sextas) --> Reposições e reforços
+- Em dezembro, as aulas de Appium serão conjuntas (segundas e quartas)
+- Término previsto em 15/dez
+- 26/jan começa a turma 133 --> Robot Framework e Zoomba (para desktop) - segundas e quarta
+
+- Cupom MOBILE40 - 40% de desconto até 14/out
+  Em 15/out, todos os cursos vão aumentar 20%
+
+
+
+
+
+
