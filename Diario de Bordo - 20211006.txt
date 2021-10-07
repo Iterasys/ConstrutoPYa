@@ -31,7 +31,6 @@ _nome = nome
 Hoje em dia, as empresas preferem sistemas assincronos ao invés de sincronos.
 Analogia entre a mensagem de WhatsApp e a ligação telefônica
 
-
 A v i s o s:
 - 7 e 8/out: Semana de Teste Mobile --> Assista ao vivo e/ou as gravações (Dezembro)
 - Não haverá aula em 11 e 12/out
@@ -42,6 +41,11 @@ A v i s o s:
 
 - Cupom MOBILE40 - 40% de desconto até 14/out
   Em 15/out, todos os cursos vão aumentar 20%
+
+ - Mentoria em grupo - 4 e 5 sessões
+ > 30 a 45 min - José Correia
+ > Perguntas e Resposta
+ > Apresentação de um colega
 
 
 
